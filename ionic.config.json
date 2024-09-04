@@ -1,0 +1,7 @@
+{
+  "name": "ProyectoBarberia",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
