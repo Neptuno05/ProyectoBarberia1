@@ -10,6 +10,22 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-
+<ion-content [fullscreen]="true"> 
+  <ion-content class="ion-padding">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <ion-item>
+        <ion-label position="floating">Nombre de Usuario</ion-label>
+        <ion-input formControlName="username" type="text" required></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input formControlName="password" type="password" required></ion-input>
+      </ion-item>
+  
+      <ion-button expand="block" type="submit" [disabled]="!loginForm.valid">Enviar</ion-button>
+      <ion-button expand="block" fill="outline" (click)="onResetPassword()">Restablecer Contraseña</ion-button>
+    </form>
+  </ion-content>
+  
 </ion-content>
