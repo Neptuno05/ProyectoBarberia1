@@ -11,7 +11,7 @@ export class LoginPage {
   loginForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private navCtrl: NavController) {
-    // Configuración del formulario reactivo con validaciones
+        // Configuración del formulario reactivo con validaciones
     this.loginForm = this.formBuilder.group({
       username: [
         '', 
@@ -30,6 +30,9 @@ export class LoginPage {
         ]
       ],
     });
+  }
+  goBack() {
+    this.navCtrl.back();
   }
 
   // Acceso rápido a los controles del formulario
@@ -56,8 +59,10 @@ export class LoginPage {
   }
 
   // Función para regresar a la página anterior
-  goBack() {
-    this.navCtrl.back();
-  }
+  /* The `goBack` function in the `LoginPage` class is a method that is responsible for navigating back
+  to the previous page using the `NavController` provided by Ionic. When this function is called, it
+  triggers the `back()` method of the `NavController` instance, which essentially performs the
+  navigation action to go back to the previous page in the navigation stack. */
+  
 }
 
