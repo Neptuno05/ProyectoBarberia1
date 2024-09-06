@@ -18,11 +18,12 @@ const routes: Routes = [
   {
     path: 'message',
     loadChildren: () => import('./message/message.module').then( m => m.MessagePageModule)
-  }
+  },
   {
     path: 'agendar/:barbero',
     loadChildren: () => import('./agendar/agendar.module').then( m => m.AgendarPageModule)
-  },  {
+  },
+  {
     path: 'agendar',
     loadChildren: () => import('./agendar/agendar.module').then( m => m.AgendarPageModule)
   }
