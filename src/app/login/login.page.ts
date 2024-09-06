@@ -52,7 +52,7 @@ export class LoginPage {
   // Función para manejar el restablecimiento de la contraseña
   onResetPassword() {
     console.log('Restablecer contraseña');
-    // Lógica para restablecer contraseña
+    this.navCtrl.navigateForward('/forgot-password');
   }
 
   // Función para regresar a la página anterior
