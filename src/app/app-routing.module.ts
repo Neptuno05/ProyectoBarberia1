@@ -22,6 +22,14 @@ const routes: Routes = [
   {
     path: 'forgot-password',
     loadChildren: () => import('./forgot-password/forgot-password.module').then(m => m.ForgotPasswordPageModule)
+  },
+  {
+    path: 'agendar/:barbero',
+    loadChildren: () => import('./agendar/agendar.module').then( m => m.AgendarPageModule)
+  },
+  {
+    path: 'agendar',
+    loadChildren: () => import('./agendar/agendar.module').then( m => m.AgendarPageModule)
   }
 ];
 
