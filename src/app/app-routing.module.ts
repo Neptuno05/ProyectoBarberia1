@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',  // Redirigir a la página de login por defecto
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   {
@@ -17,12 +17,9 @@ const routes: Routes = [
   },
   {
     path: 'message',
-    loadChildren: () => import('./message/message.module').then(m => m.MessagePageModule)
-  },
-  {
-    path: 'forgot-password',
-    loadChildren: () => import('./forgot-password/forgot-password.module').then(m => m.ForgotPasswordPageModule)
+    loadChildren: () => import('./message/message.module').then( m => m.MessagePageModule)
   }
+
 ];
 
 @NgModule({
