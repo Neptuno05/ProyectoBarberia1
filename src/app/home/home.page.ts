@@ -14,5 +14,8 @@ export class HomePage  {
     this.navCtrl.back();
   }
   
-
+  goToAgendar(barbero: string) {
+    // Te lleva a la página de agendamiento con el id del barbero
+    this.navCtrl.navigateForward(`/agendar/${barbero}`);
+  }
 }
