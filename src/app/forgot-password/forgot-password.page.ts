@@ -31,4 +31,7 @@ export class ForgotPasswordPage  {
       console.log('Formulario no válido');
     }
   }
+  goBack() {
+    this.navCtrl.back();
+  }
 }
