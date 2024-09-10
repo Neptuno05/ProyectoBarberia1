@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthService } from './services/auth.service'; // Importar el servicio
 
 import { RouteReuseStrategy } from '@angular/router';
 
@@ -18,4 +19,6 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(public authService: AuthService) {} // Inyectar el servicio
+}
