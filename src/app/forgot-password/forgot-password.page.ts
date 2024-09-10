@@ -26,7 +26,7 @@ export class ForgotPasswordPage  {
       // Lógica para enviar la solicitud de restablecimiento de contraseña
 
       // Redirigir al usuario al home después de enviar la solicitud
-      this.navCtrl.navigateRoot('/home');
+      this.navCtrl.navigateRoot('/login');
     } else {
       console.log('Formulario no válido');
     }
